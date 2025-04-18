@@ -109,7 +109,6 @@ const Question = () => {
           (cur.score >= 2 ? cur.id.substring(0, 1) : cur.id.substring(1, 2)),
         ""
       );
-      console.log(mbti);
       navigate({
         pathname: "/result",
         search: `?${createSearchParams({ mbti: mbti })}`,

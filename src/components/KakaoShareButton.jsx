@@ -4,7 +4,6 @@ const { Kakao } = window;
 const KakaoShareButton = () => {
   const url = "https://catmbtl.netlify.app/";
   const resultUrl = window.location.href;
-  console.log(resultUrl);
   useEffect(() => {
     Kakao.cleanup();
     Kakao.init("b66f3f3ad94dab602ffb859e2432af61");
