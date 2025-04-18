@@ -68,7 +68,6 @@ const Result = () => {
   const handleClickButton = () => {
     navigate("/");
   };
-  console.log(resultD);
   return (
     <Wrapper>
       <Header>예비집사 판별기</Header>
