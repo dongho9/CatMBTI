@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { resultData } from "../assets/resultData";
+import KakaoShareButton from "../components/KakaoShareButton";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -27,9 +28,6 @@ const Contents = styled.div`
   justify-content: center;
   align-items: center;
   gap: 14px;
-  button {
-    font-size: 1.6rem;
-  }
 `;
 const Title = styled.div`
   font-size: 2.4rem;
@@ -49,6 +47,14 @@ const Desc = styled.div`
   color: var(--light-color);
   padding: 8px 14px;
   border-radius: 8px;
+`;
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  button {
+    font-size: 1.6rem;
+  }
 `;
 const Result = () => {
   const [resultD, setResultD] = useState();
@@ -75,7 +81,10 @@ const Result = () => {
           예비집사님과 찰떡궁합인 고양이는 <br />
           {mbti}형 {resultD?.name} 고양이입니다.
         </Desc>
-        <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+        <ButtonGroup>
+          <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+          <KakaoShareButton />
+        </ButtonGroup>
       </Contents>
     </Wrapper>
   );
