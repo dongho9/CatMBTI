@@ -23,6 +23,9 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   font-size: 3rem;
+  @media screen and (max-width: 780px) {
+    font-size: 2.4rem;
+  }
 `;
 
 const ButtonGroup = styled.div`
@@ -33,6 +36,12 @@ const ButtonGroup = styled.div`
     width: 400px;
     height: 200px;
     border-radius: 8px;
+  }
+  @media screen and (max-width: 850px) {
+    flex-direction: column;
+    button {
+      width: 100%;
+    }
   }
 `;
 
