@@ -29,8 +29,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
   body{
-    font-size: 1.6rem;
-    font-family: "SimKyungha";
+    font-size: 1.6rem !important;
+    font-family: "SimKyungha" !important;
   }
 `;
 
